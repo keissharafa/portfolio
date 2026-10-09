@@ -289,24 +289,30 @@ export default function Home() {
           .process-connector {
             display: none !important;
           }
+          /* === PERBAIKAN NAVBAR === */
+          .navbar-inner {
+            padding: 16px !important;
+          }
           .nav-menu {
-            justify-content: center;
-            gap: 16px !important;
+            gap: 12px !important;
+          }
+          .nav-menu a {
+            font-size: 14px !important;
           }
         }
       `}} />
 
       {/* ─── NAVBAR ─── */}
       <header className="navbar" style={{ position: 'sticky', top: 0, zIndex: 50, background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(10px)', borderBottom: '1px solid #e4e4e0' }}>
-        <div className="navbar-inner" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '16px', padding: '16px 24px', maxWidth: '1100px', margin: '0 auto' }}>
-          <a href="#home" className="brand" style={{ fontWeight: 'bold', fontSize: '18px', color: '#111', textDecoration: 'none' }}>
+        <div className="navbar-inner" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '8px', padding: '16px 24px', maxWidth: '1100px', margin: '0 auto' }}>
+          <a href="#home" className="brand" style={{ fontWeight: 'bold', fontSize: '18px', color: '#111', textDecoration: 'none', flexShrink: 0 }}>
             <span style={{ background: '#111', color: '#fff', padding: '4px 8px', borderRadius: '4px', marginRight: '8px' }}>K</span>Kei.
           </a>
-          <nav className="nav-menu" style={{ display: 'flex', flexWrap: 'wrap', gap: '24px' }}>
-            <a href="#about" style={{ textDecoration: 'none', color: '#3a3a38', fontWeight: 500 }}>About</a>
-            <a href="#process" style={{ textDecoration: 'none', color: '#3a3a38', fontWeight: 500 }}>Process</a>
-            <a href="#projects" style={{ textDecoration: 'none', color: '#3a3a38', fontWeight: 500 }}>Work</a>
-            <a href="#contact" style={{ textDecoration: 'none', color: '#3a3a38', fontWeight: 500 }}>Contact</a>
+          <nav className="nav-menu" style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
+            <a href="/#about" style={{ textDecoration: 'none', color: '#3a3a38', fontWeight: 500 }}>About</a>
+            <a href="/#process" style={{ textDecoration: 'none', color: '#3a3a38', fontWeight: 500 }}>Process</a>
+            <a href="/#projects" style={{ textDecoration: 'none', color: '#3a3a38', fontWeight: 500 }}>Work</a>
+            <a href="/#contact" style={{ textDecoration: 'none', color: '#3a3a38', fontWeight: 500 }}>Contact</a>
           </nav>
         </div>
       </header>
@@ -320,7 +326,7 @@ export default function Home() {
             <div>
               <div className="animate-fade-in" style={{ display: "inline-block", background: "rgba(232,93,58,0.1)", color: "#E85D3A", padding: "6px 12px", borderRadius: "20px", fontSize: "12px", fontWeight: "bold", marginBottom: "24px" }}>
                 <span style={{ display: "inline-block", width: "8px", height: "8px", background: "#E85D3A", borderRadius: "50%", marginRight: "8px" }}></span>
-                Open to freelance work
+                Open to work
               </div>
 
               <h1 style={{ fontSize: "clamp(40px, 8vw, 56px)", fontWeight: "800", lineHeight: "1.1", marginBottom: "16px", color: "#111" }}>
@@ -329,7 +335,8 @@ export default function Home() {
                 <span className="animate-fade-in delay-200" style={{ color: "#8a8a85", fontWeight: "400", fontStyle: "italic", display: "inline-block", marginTop: "8px" }}>Web Developer.</span>
               </h1>
 
-<p className="animate-fade-in delay-300" style={{ fontSize: "16px", color: "#3a3a38", lineHeight: "1.7", maxWidth: "540px", marginBottom: "32px" }}>                I specialize in building responsive, interactive, and scalable web interfaces. Backed by a strong foundation in Informatics Engineering major, I don't just make things look good, I write clean code that makes them work flawlessly.
+              <p className="animate-fade-in delay-300" style={{ fontSize: "16px", color: "#3a3a38", lineHeight: "1.7", maxWidth: "540px", marginBottom: "32px" }}>
+                I specialize in building responsive, interactive, and scalable web interfaces. Backed by a strong foundation in Informatics Engineering major, I don't just make things look good, I write clean code that makes them work flawlessly.
               </p>
 
               <div className="animate-fade-in delay-400">

@@ -34,9 +34,8 @@ export default function VeridocCaseStudy() {
                     </p>
 
                     {/* MOCKUP IMAGE (Pastikan ada gambar di folder public) */}
-                    <div style={{ width: "100%", aspectRatio: "16/9", borderRadius: "16px", overflow: "hidden", background: "#DDE8FB", border: "1px solid #e4e4e0", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <span style={{ fontSize: "24px", fontWeight: "bold", color: "#E85D3A" }}>VERIDOC Mockup Here</span>
-                        {/* <img src="/Landing page.jpg" alt="Veridoc Landing Page" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
+                    <div style={{ width: "100%", aspectRatio: "16/9", borderRadius: "16px", overflow: "hidden", border: "1px solid #e4e4e0", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <img src="/veridoc.png" alt="HerRoute Interface" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
                 </div>
 

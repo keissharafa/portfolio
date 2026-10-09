@@ -35,7 +35,7 @@ export default function SereneCaseStudy() {
 
                     {/* MOCKUP IMAGE (Ganti nama file jika perlu) */}
                     <div style={{ width: "100%", borderRadius: "16px", overflow: "hidden", background: "#DDE8FB", border: "1px solid #e4e4e0" }}>
-                        <img src="/serene.png" alt="SERENE App Interface" style={{ width: "100%", height: "auto", display: "block" }} />
+                        <img src="/serene.jpg" alt="SERENE App Interface" style={{ width: "100%", height: "auto", display: "block" }} />
                     </div>
                 </div>
 

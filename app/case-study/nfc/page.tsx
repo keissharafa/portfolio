@@ -34,9 +34,8 @@ export default function NFCCaseStudy() {
                     </p>
 
                     {/* MOCKUP IMAGE (Pastikan ada gambar di folder public) */}
-                    <div style={{ width: "100%", aspectRatio: "16/9", borderRadius: "16px", overflow: "hidden", background: "#DDE8FB", border: "1px solid #e4e4e0", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <span style={{ fontSize: "24px", fontWeight: "bold", color: "#E85D3A" }}>NFC Interface Mockup Here</span>
-                        {/* <img src="/nfc-attendance.png" alt="NFC Interface" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
+                    <div style={{ width: "100%", aspectRatio: "16/9", borderRadius: "16px", overflow: "hidden", border: "1px solid #e4e4e0", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <img src="/nfc.jpg" alt="NFC Attendance Interface" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
                 </div>
 

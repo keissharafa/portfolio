@@ -34,10 +34,8 @@ export default function LokanaCaseStudy() {
                     </p>
 
                     {/* MOCKUP IMAGE (Pastikan ada gambar lokana.png di folder public, atau ganti namanya) */}
-                    <div style={{ width: "100%", aspectRatio: "16/9", borderRadius: "16px", overflow: "hidden", background: "#FFE8D8", border: "1px solid #e4e4e0", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        {/* Hapus baris di bawah ini dan uncomment tag <img> kalau kamu sudah punya gambar mockup Lokana */}
-                        <span style={{ fontSize: "24px", fontWeight: "bold", color: "#E85D3A" }}>Lokana Mockup Here</span>
-                        {/* <img src="/lokana.png" alt="Lokana Web Interface" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
+                    <div style={{ width: "100%", aspectRatio: "16/9", borderRadius: "16px", overflow: "hidden", border: "1px solid #e4e4e0", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <img src="/lokana.png" alt="Lokana Web Interface" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
                 </div>
 

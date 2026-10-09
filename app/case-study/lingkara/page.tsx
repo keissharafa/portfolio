@@ -34,9 +34,8 @@ export default function LingkaraCaseStudy() {
                     </p>
 
                     {/* MOCKUP IMAGE */}
-                    <div style={{ width: "100%", aspectRatio: "16/9", borderRadius: "16px", overflow: "hidden", background: "#F4F1C4", border: "1px solid #e4e4e0", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <span style={{ fontSize: "24px", fontWeight: "bold", color: "#E85D3A" }}>Lingkara Mockup Here</span>
-                        {/* <img src="/lingkara.png" alt="Lingkara Interface" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
+                    <div style={{ width: "100%", aspectRatio: "16/9", borderRadius: "16px", overflow: "hidden", border: "1px solid #e4e4e0", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <img src="/lingkara.jpeg" alt="Lingkara Interface" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
                 </div>
 

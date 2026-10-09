@@ -27,17 +27,28 @@ interface Project {
 const projectsData: Project[] = [
   {
     id: 1,
-    title: "SERENE",
-    category: "Mobile Interface & UX",
-    tags: ["UI/UX Design", "UX Research", "Figma"],
-    desc: "An urban safety evaluation and emergency navigation app. Conducted extensive UX research on public safety perceptions to map out critical data flows, resulting in a seamless SOS routing interface that prioritizes user safety and swift response times.",
+    title: "HerRoute",
+    category: "Web App",
+    tags: ["React", "Leaflet", "TypeScript"],
+    desc: "A mobility safety navigation web app built for the SISTECH 2026 program. Developed dynamic front-end interfaces, integrated interactive maps using Leaflet and data visualizations via Recharts, and seamlessly integrated machine learning-based risk prediction APIs into the frontend ecosystem.",
     colors: { a: "#F9E8EC", b: "#DDE8FB" },
-    image: "/serene.jpg",
-    caseStudyUrl: "/case-study/serene",
-    liveDemoUrl: "https://www.figma.com/proto/IqNWWhc0OYWJ82wlChfTJU/SERENE--Safety-Evaluation---Responsive-Emergency-Navigation-Engine-?node-id=44-98&viewport=1480%2C-688%2C0.14&t=3FRAW22qVRh06D06-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=44%3A98&show-proto-sidebar=1&page-id=1%3A2"
+    image: "/her-route.png",
+    caseStudyUrl: "/case-study/her-route",
+    liveDemoUrl: "https://github.com/SISTECH26-FINPRO5/FE-HerRoute.git"
   },
   {
     id: 2,
+    title: "Smart Queue System",
+    category: "Real-time Dashboard",
+    tags: ["SSE", "JavaScript", "Real-time", "Laravel", "PHP"],
+    desc: "Architected a real-time queue management dashboard. Leveraged Server-Sent Events (SSE) to ensure instant UI updates without manual browser refreshing.",
+    colors: { a: "#E6F0FF", b: "#FFE8D8" },
+    image: "/sse.png",
+    caseStudyUrl: "/case-study/smartqueue",
+    liveDemoUrl: "https://github.com/keissharafa/sistem_antrean_sse.git"
+  },
+  {
+    id: 3,
     title: "Lokana",
     category: "E-Commerce Web",
     tags: ["Laravel", "Website", "PHP"],
@@ -45,18 +56,7 @@ const projectsData: Project[] = [
     colors: { a: "#E6F0FF", b: "#FFE8D8" },
     image: "/lokana.png",
     caseStudyUrl: "/case-study/lokana",
-    liveDemoUrl: "https://lokana.up.railway.app/"
-  },
-  {
-    id: 3,
-    title: "Concierge",
-    category: "Helpdesk System",
-    tags: ["Supabase", "Flutter", "Mobile Apps"],
-    desc: "Built a ticketing and customer support dashboard. Focused on rendering complex data tables efficiently and ensuring an accessible UI for support agents.",
-    colors: { a: "#F9E8EC", b: "#DDE8FB" },
-    image: "/concierge.jpg",
-    caseStudyUrl: "/case-study/concierge",
-    liveDemoUrl: "https://github.com/keissharafa/434241073_keisha-rafa-nabila_b1_uts.git"
+    liveDemoUrl: "https://github.com/keissharafa/lokana.git"
   },
   {
     id: 4,
@@ -71,14 +71,14 @@ const projectsData: Project[] = [
   },
   {
     id: 5,
-    title: "Smart Queue System",
-    category: "Real-time Dashboard",
-    tags: ["SSE", "JavaScript", "Real-time", "Laravel", "PHP"],
-    desc: "Architected a real-time queue management dashboard. Leveraged Server-Sent Events (SSE) to ensure instant UI updates without manual browser refreshing.",
-    colors: { a: "#E6F0FF", b: "#FFE8D8" },
-    image: "/smartqueue.jpg",
-    caseStudyUrl: "/case-study/smartqueue",
-    liveDemoUrl: "https://github.com/keissharafa/sistem_antrean_sse.git"
+    title: "Concierge",
+    category: "Helpdesk System",
+    tags: ["Supabase", "Flutter", "Mobile Apps"],
+    desc: "Built a ticketing and customer support dashboard. Focused on rendering complex data tables efficiently and ensuring an accessible UI for support agents.",
+    colors: { a: "#F9E8EC", b: "#DDE8FB" },
+    image: "/concierge.jpg",
+    caseStudyUrl: "/case-study/concierge",
+    liveDemoUrl: "https://github.com/keissharafa/434241073_keisha-rafa-nabila_b1_uts.git"
   },
   {
     id: 6,
@@ -112,6 +112,17 @@ const projectsData: Project[] = [
     image: "/veridoc.png",
     caseStudyUrl: "/case-study/veridoc",
     liveDemoUrl: "https://www.figma.com/proto/eo83ve0jglmm76FQAb6345/VERIDOC-by-Arkana-Forensia---OLIVIA-2026?node-id=243-3467&p=f&viewport=2693%2C-466%2C0.12&t=GvWerH4sWdzxKaRW-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=243%3A3467&page-id=83%3A2"
+  },
+  {
+    id: 9,
+    title: "SERENE",
+    category: "Mobile Interface & UX",
+    tags: ["UI/UX Design", "UX Research", "Figma"],
+    desc: "An urban safety evaluation and emergency navigation app. Conducted extensive UX research on public safety perceptions to map out critical data flows, resulting in a seamless SOS routing interface that prioritizes user safety and swift response times.",
+    colors: { a: "#F9E8EC", b: "#DDE8FB" },
+    image: "/serene.jpg",
+    caseStudyUrl: "/case-study/serene",
+    liveDemoUrl: "https://www.figma.com/proto/IqNWWhc0OYWJ82wlChfTJU/SERENE--Safety-Evaluation---Responsive-Emergency-Navigation-Engine-?node-id=44-98&viewport=1480%2C-688%2C0.14&t=3FRAW22qVRh06D06-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=44%3A98&show-proto-sidebar=1&page-id=1%3A2"
   },
 ];
 
@@ -295,7 +306,7 @@ export default function Home() {
               <h1 style={{ fontSize: "56px", fontWeight: "800", lineHeight: "1.1", marginBottom: "16px", color: "#111" }}>
                 {/* Elemen ini akan dianimasikan per karakter oleh GSAP */}
                 <div ref={textRevealRef}>Hi, I'm Keisha!</div>
-                <span className="animate-fade-in delay-200" style={{ color: "#8a8a85", fontWeight: "400", fontStyle: "italic", display: "inline-block", marginTop: "8px" }}>Front-End Developer.</span>
+                <span className="animate-fade-in delay-200" style={{ color: "#8a8a85", fontWeight: "400", fontStyle: "italic", display: "inline-block", marginTop: "8px" }}>Web Developer.</span>
               </h1>
 
               <p className="animate-fade-in delay-300" style={{ fontSize: "16px", color: "#3a3a38", lineHeight: "1.7", maxWidth: "540px", marginBottom: "32px" }}>

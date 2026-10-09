@@ -259,7 +259,7 @@ export default function Home() {
 
   return (
     <>
-      {/* ─── STYLES UNTUK ANIMASI CSS STANDAR ─── */}
+      {/* ─── STYLES UNTUK ANIMASI CSS STANDAR DAN RESPONSIVE LENGKAP ─── */}
       <style dangerouslySetInnerHTML={{
         __html: `
         @keyframes fadeInUp {
@@ -274,15 +274,35 @@ export default function Home() {
         .delay-200 { animation-delay: 0.2s; }
         .delay-300 { animation-delay: 0.3s; }
         .delay-400 { animation-delay: 0.4s; }
+
+        /* Media Queries untuk Layar Mobile */
+        @media (max-width: 768px) {
+          .hero-grid {
+            grid-template-columns: 1fr !important;
+            text-align: center;
+            gap: 32px !important;
+          }
+          .hero-grid > div:last-child {
+            max-width: 280px;
+            margin: 0 auto;
+          }
+          .process-connector {
+            display: none !important;
+          }
+          .nav-menu {
+            justify-content: center;
+            gap: 16px !important;
+          }
+        }
       `}} />
 
       {/* ─── NAVBAR ─── */}
       <header className="navbar" style={{ position: 'sticky', top: 0, zIndex: 50, background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(10px)', borderBottom: '1px solid #e4e4e0' }}>
-        <div className="navbar-inner" style={{ display: 'flex', justifyContent: 'space-between', padding: '16px 24px', maxWidth: '1100px', margin: '0 auto' }}>
+        <div className="navbar-inner" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '16px', padding: '16px 24px', maxWidth: '1100px', margin: '0 auto' }}>
           <a href="#home" className="brand" style={{ fontWeight: 'bold', fontSize: '18px', color: '#111', textDecoration: 'none' }}>
             <span style={{ background: '#111', color: '#fff', padding: '4px 8px', borderRadius: '4px', marginRight: '8px' }}>K</span>Kei.
           </a>
-          <nav className="nav-menu" style={{ display: 'flex', gap: '24px' }}>
+          <nav className="nav-menu" style={{ display: 'flex', flexWrap: 'wrap', gap: '24px' }}>
             <a href="#about" style={{ textDecoration: 'none', color: '#3a3a38', fontWeight: 500 }}>About</a>
             <a href="#process" style={{ textDecoration: 'none', color: '#3a3a38', fontWeight: 500 }}>Process</a>
             <a href="#projects" style={{ textDecoration: 'none', color: '#3a3a38', fontWeight: 500 }}>Work</a>
@@ -294,7 +314,7 @@ export default function Home() {
       <main ref={heroContainerRef}>
         {/* ─── HERO SECTION ─── */}
         <section className="hero-section" id="about" style={{ padding: "80px 24px", overflow: "hidden", background: "#FFFFFF" }}>
-          <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1.2fr 0.8fr", gap: "48px", alignItems: "center" }}>
+          <div className="hero-grid" style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1.2fr 0.8fr", gap: "48px", alignItems: "center" }}>
 
             {/* Kiri: Teks */}
             <div>
@@ -303,14 +323,13 @@ export default function Home() {
                 Open to freelance work
               </div>
 
-              <h1 style={{ fontSize: "56px", fontWeight: "800", lineHeight: "1.1", marginBottom: "16px", color: "#111" }}>
+              <h1 style={{ fontSize: "clamp(40px, 8vw, 56px)", fontWeight: "800", lineHeight: "1.1", marginBottom: "16px", color: "#111" }}>
                 {/* Elemen ini akan dianimasikan per karakter oleh GSAP */}
                 <div ref={textRevealRef}>Hi, I'm Keisha!</div>
                 <span className="animate-fade-in delay-200" style={{ color: "#8a8a85", fontWeight: "400", fontStyle: "italic", display: "inline-block", marginTop: "8px" }}>Web Developer.</span>
               </h1>
 
-              <p className="animate-fade-in delay-300" style={{ fontSize: "16px", color: "#3a3a38", lineHeight: "1.7", maxWidth: "540px", marginBottom: "32px" }}>
-                I specialize in building responsive, interactive, and scalable web interfaces. Backed by a strong foundation in Informatics Engineering major, I don't just make things look good, I write clean code that makes them work flawlessly.
+<p className="animate-fade-in delay-300" style={{ fontSize: "16px", color: "#3a3a38", lineHeight: "1.7", maxWidth: "540px", marginBottom: "32px" }}>                I specialize in building responsive, interactive, and scalable web interfaces. Backed by a strong foundation in Informatics Engineering major, I don't just make things look good, I write clean code that makes them work flawlessly.
               </p>
 
               <div className="animate-fade-in delay-400">
@@ -380,7 +399,7 @@ export default function Home() {
             </div>
 
             <div className="process-showcase" style={{ position: "relative" }}>
-              {/* Konektor SVG bisa kamu sesuaikan warnanya di sini */}
+              {/* Konektor SVG otomatis tersembunyi di mobile lewat CSS */}
               <svg className="process-connector" viewBox="0 0 1000 300" preserveAspectRatio="none" style={{ width: "100%", height: "150px", position: "absolute", top: "50px", zIndex: -1 }}>
                 <path d="M 230 140 C 300 60, 380 60, 430 140" fill="none" stroke="#E85D3A" strokeWidth="2" strokeDasharray="4 4" />
                 <circle cx="230" cy="140" r="5" fill="#E85D3A" />
@@ -523,7 +542,7 @@ export default function Home() {
             © 2026 Keisha Rafa Nabila.
           </p>
         </div>
-      </footer >
+      </footer>
     </>
   );
 }
